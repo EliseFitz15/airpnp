@@ -1,0 +1,23 @@
+<h1>Add a Bathroom</h1>
+
+ <%= form_for @bathroom do |f| %>
+  <%= f.label :location_name %>
+  <%= f.text_field :location_name %>
+  <br>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <br>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+  <br>
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+  <br>
+  <%= f.label :zip %>
+  <%= f.text_field :zip %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br>
+  <%= f.submit "Add Bathroom", class: "button" %>
+ <% end %>
