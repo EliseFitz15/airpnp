@@ -1,9 +1,21 @@
-<h1> <%= @bathroom.location_name %></h1>
- <li><%= @bathroom.description %> </li>
+<h1> <%= @bathroom.location_name %> </h1>
+<ul>
+  <li>
+    <%= @bathroom.address%>,<%= @bathroom.city %>, <%= @bathroom.state %> <%= @bathroom.zip %>
+  </li>
+  <li>
+    <%= @bathroom.description %>
+  </li>
+</ul>
 
 <h3>Reviews</h3>
+<ul>
+  <% @reviews.each do |review| %>
+  <li>
+      rating: <%= review.rating %> - <%= review.body %>
+  </li>
 
-<% @reviews.each do |review| %>
-  <%= review.body %>
-  <%= review.rating %>
-<% end %>
+  <% end %>
+</ul>
+
+<%= link_to "Back", bathrooms_path %>

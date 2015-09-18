@@ -1,9 +1,9 @@
 <h1>Bathrooms</h1>
 
 <ul>
-<% @bathrooms.each do |bathroom| %>
-  <li>
-  <%= bathroom.location_name %>
-  </li>
+  <% @bathrooms.each do |bathroom| %>
+    <li> <%= link_to bathroom.location_name, bathroom_path(bathroom) %> </li>
   <% end %>
 </ul>
+
+<%= link_to "Add bathroom", new_bathroom_path %>
